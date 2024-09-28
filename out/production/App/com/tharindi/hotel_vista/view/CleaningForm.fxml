@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tharindi.hotel_vista.controller.CleaningFormController">
+   <children>
+      <Label layoutX="37.0" layoutY="31.0" prefHeight="25.0" prefWidth="165.0" text="Cleaning Management" textFill="#130970">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="62.0" prefHeight="3.0" prefWidth="574.0" />
+      <Button layoutX="342.0" layoutY="31.0" mnemonicParsing="false" onAction="#newCleaningOnAction" style="-fx-background-color: #6EACDA;" text="+ Cleaning Task" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="482.0" layoutY="31.0" mnemonicParsing="false" onAction="#backToHomeOnAction" style="-fx-background-color: #03346E;" text="Back to Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtId" editable="false" layoutX="24.0" layoutY="79.0" prefHeight="25.0" prefWidth="97.0" promptText="Cleaning Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSearch" layoutX="26.0" layoutY="118.0" prefHeight="27.0" prefWidth="373.0" promptText="Search Here">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn" layoutX="408.0" layoutY="118.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: #508C9B;" text="Save Cleaning Task" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Separator layoutX="21.0" layoutY="159.0" prefHeight="3.0" prefWidth="574.0" />
+      <TableView fx:id="tblCleanings" layoutX="76.0" layoutY="173.0" prefHeight="200.0" prefWidth="447.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="61.999969482421875" text="#Id" />
+            <TableColumn fx:id="colCleaningDate" prefWidth="113.33334350585938" text="Cleaning Date" />
+            <TableColumn fx:id="colCleaningStatus" prefWidth="143.33331298828125" text="Cleaning Status" />
+            <TableColumn fx:id="colRoomNumber" minWidth="0.0" prefWidth="127.33331298828125" text="Room Number" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="txtCleaningDate" layoutX="134.0" layoutY="80.0" prefHeight="25.0" prefWidth="135.0" promptText="Cleaning Date" />
+      <ComboBox fx:id="comboStatus" layoutX="278.0" layoutY="80.0" prefHeight="25.0" prefWidth="142.0" promptText="Cleaning Status" />
+      <ComboBox fx:id="comboNumber" layoutX="428.0" layoutY="80.0" prefWidth="150.0" promptText="Room Number" />
+   </children>
+</AnchorPane>

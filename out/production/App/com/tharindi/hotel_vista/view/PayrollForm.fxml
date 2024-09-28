@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tharindi.hotel_vista.controller.PayrollFormController">
+   <children>
+      <Label layoutX="37.0" layoutY="31.0" prefHeight="25.0" prefWidth="150.0" text="Payroll Management" textFill="#130970">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="62.0" prefHeight="3.0" prefWidth="574.0" />
+      <Button layoutX="388.0" layoutY="31.0" mnemonicParsing="false" onAction="#newPayrollOnAction" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #6EACDA;" text="+ Payroll" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="482.0" layoutY="31.0" mnemonicParsing="false" onAction="#backToHomeOnAction" style="-fx-background-color: #03346E;" text="Back to Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtId" editable="false" layoutX="24.0" layoutY="79.0" prefHeight="25.0" prefWidth="97.0" promptText="Payroll Id">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmployeeName" layoutX="135.0" layoutY="79.0" prefHeight="27.0" prefWidth="127.0" promptText="Employee Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNetPay" layoutX="271.0" layoutY="79.0" prefHeight="27.0" prefWidth="135.0" promptText="Net Pay">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtSearch" layoutX="26.0" layoutY="118.0" prefHeight="27.0" prefWidth="373.0" promptText="Search Here">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn" layoutX="408.0" layoutY="118.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: #508C9B;" text="Save Payroll" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Separator layoutX="21.0" layoutY="159.0" prefHeight="3.0" prefWidth="574.0" />
+      <TableView fx:id="tblPayrolls" layoutX="24.0" layoutY="173.0" prefHeight="200.0" prefWidth="568.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="61.999969482421875" text="#Id" />
+            <TableColumn fx:id="colEmployeeName" prefWidth="113.33334350585938" text="Employee Name" />
+            <TableColumn fx:id="colNetPay" prefWidth="143.33331298828125" text="Net Pay" />
+            <TableColumn fx:id="colEmployeeType" prefWidth="143.33331298828125" text="Employee Type" />
+            <TableColumn fx:id="colOption" prefWidth="106.66668701171875" text="Option" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="comboEmployeeType" layoutX="421.0" layoutY="80.0" prefWidth="150.0" promptText="Employee Type" />
+   </children>
+</AnchorPane>

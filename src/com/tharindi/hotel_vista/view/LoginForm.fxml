@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tharindi.hotel_vista.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="467.0" fitWidth="610.0" layoutX="-4.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="266.0" layoutY="27.0" text="Login" textFill="#17098f">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="139.0" layoutY="99.0" prefHeight="40.0" prefWidth="328.0" promptText="email" />
+      <Separator layoutX="10.0" layoutY="74.0" prefHeight="8.0" prefWidth="578.0" />
+      <PasswordField fx:id="txtPassword" layoutX="139.0" layoutY="170.0" prefHeight="40.0" prefWidth="328.0" promptText="password" />
+      <Button layoutX="130.0" layoutY="279.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="17.0" prefWidth="328.0" style="-fx-background-color: #6EACDA;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink layoutX="358.0" layoutY="227.0" onAction="#forgotPasswordOnAction" prefHeight="24.0" prefWidth="99.0" text="forgot password" textFill="WHITE" underline="true" />
+      <Label layoutX="288.0" layoutY="328.0" text="or" textFill="#f6f5f8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="130.0" layoutY="366.0" mnemonicParsing="false" onAction="#createAccountOnAction" prefHeight="17.0" prefWidth="328.0" style="-fx-background-color: #03346E;" text="Create Account" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
